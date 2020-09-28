@@ -372,6 +372,7 @@ public:
 
 		if (candidate_list_width == maxLength) {
 			numOfFrequentForLevel = 0;
+            cout << "maxLength reached. Exiting" << endl;
 		}
 		return numOfFrequentForLevel;
 	}
@@ -929,6 +930,7 @@ public:
 	int numOfPages;
 	int numOfStreams;
 	int numOfGPUs;
+    int maxLength;
 
 	int numOfCandidates;
 	int verticalListLength;

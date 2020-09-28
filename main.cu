@@ -91,7 +91,7 @@ bool readInputParameter(int argc, char*argv[], inputParameter* input) {
 			input->isWriteOutput = atoi(argv[++argnr]);
 		}
 		else if (!strcmp(argv[argnr], "-l")){
-			input->maxLength = atoi(argv[++argnr]);)
+			input->maxLength = atoi(argv[++argnr]);
 		}
 
 	}

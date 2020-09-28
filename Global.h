@@ -93,6 +93,7 @@ struct inputParameter {
 	int isMaterialization;
 	int sizeOfFragments;
 	int isWriteOutput;
+    int maxLength;
 };
 void print_vector(vector<int> v)
 {
