@@ -59,6 +59,8 @@ public:
 		this->numOfStreams = input->numOfStreams;
 		this->maxDepth = _maxDepth;
 		this->isOutput = input->isWriteOutput;
+		this->maxLength = input->maxLength; // Max length of itemset
+
 		if(this->isOutput == 1) {
 			fout.open(input->outputPath);
 		}
@@ -367,10 +369,12 @@ public:
 				printOutput(new_candidate_list, supportArray, validate);
 			}
 		}
+
+		if (candidate_list_width == maxLength) {
+			numOfFrequentForLevel = 0;
+		}
 		return numOfFrequentForLevel;
 	}
-
-
 
 
 	// Performing an iteration by different strategy in the paper
